@@ -37,23 +37,23 @@
 									<td><c:out value="${x.nombreEscuela}" /></td>			
 									<td></td>						
 									<td>										
-										<a href="#" ><button name="editar" value="<c:out value='${x.id}'/>" type="submit" formmethod="get" formaction="editarProfesor" class="btn btn-default btn-sm">
+										<a href="#" ><button name="editar" value="<c:out value='${x.id}'/>" type="submit" formmethod="get" formaction="#" class="btn btn-default btn-sm">
           								<span class="glyphicon glyphicon-pencil"></span> 
         								</button></a>
         								
-        								<a href="#" ><button name="visualizar" value="<c:out value='${x.id}'/>" type="submit" formmethod="get" formaction="editarProfesor" class="btn btn-default btn-sm">
+        								<a href="#" ><button name="visualizar" value="<c:out value='${x.id}'/>" type="submit" formmethod="get" formaction="#" class="btn btn-default btn-sm">
           								<span class="glyphicon glyphicon-zoom-in"></span>    
           								</button></a>  
           								  	
-          								<a href="#" ><button name="lista" type="submit" formmethod="get" formaction="editarProfesor" value="<c:out value='${x.id}'/>" class="btn btn-default btn-sm">
+          								<a href="#" ><button name="lista" value="<c:out value='${x.id}'/>" type="submit" formmethod="get" formaction="#"  class="btn btn-default btn-sm">
           								<span class="glyphicon glyphicon-th-list"></span> 
         								</button></a>
         								
-        								<a href="asignarAlumnos.jsp"><button name="alumnos" type="submit" formmethod="get" formaction="editarProfesor" value="<c:out value='${x.id}'/>" class="btn btn-default btn-sm">
+        								<a href="asignarAlumno"><button name="alumnos" value="<c:out value='${x.id}'/>" type="submit" formmethod="get" formaction="#"  class="btn btn-default btn-sm">
           								<span class="glyphicon glyphicon-user"></span> 
         								</button></a>	
         														
-        								<a href="#" ><button name="borrar" value="<c:out value='${x.id}'/>" type="submit" formmethod="get" formaction="editarProfesor" class="btn btn-default btn-sm">
+        								<a href="#" ><button name="borrar" value="<c:out value='${x.id}'/>" type="submit" formmethod="get" formaction="#" class="btn btn-default btn-sm">
           								<span class="glyphicon glyphicon-remove"></span> 
         								</button></a>
         							</td>

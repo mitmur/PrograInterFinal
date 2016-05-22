@@ -39,7 +39,7 @@
 		</div>
 		<br>
 		<br>
-		<input type="button" class="btn btn-primary btn-lg btn-block" style="background-color: green" name="input" value="Ingresar" onclick="ingresar()">
+		<input type="button" class="btn btn-primary btn-lg btn-block" style="background-color: orange" name="input" value="Ingresar" onclick="ingresar()">
 	
 		
 		<br>

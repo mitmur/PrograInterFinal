@@ -25,7 +25,7 @@
     font-style: inherit;
     font-family: Calibri;">
     <br>
-    	<img src="img/UL_logo.jpg" height=150px width=150px style="margin-left: 30%;">
+    	<img src="Universidad_de_Lima_logo.png" height=150px width=150px style="margin-left: 30%;">
 		<br>
 		<br>
 		<div>

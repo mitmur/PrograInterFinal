@@ -1,0 +1,71 @@
+ul{
+	list-style: none;
+}
+html, body {
+    max-width: 100%;
+}
+.active{
+	border-bottom-width: 2px;
+}
+
+.sidebar{
+	margin: 0px;
+}
+
+.titulo-sublista{
+	margin-bottom: 10px;
+	font-size: 1.3em;
+	color: orange;
+}
+.row{
+	margin: 0px;
+}
+.sidebar > ul{
+	margin-top: 40px;
+}
+
+.sublista li{
+	font-size: 1.2em;
+	margin-bottom: 4px;
+}
+.sublista li a{
+	color: #777;
+	text-decoration: none;
+}
+.footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	text-align: center;
+	background-color: #f5f5f5;
+	padding-top: 10px;
+}
+.text-muted{
+	margin: 20px;
+}
+.titulo-container{
+	color: orange;
+}
+.contenedor{
+	padding-right:35px;
+}
+.boton-formulario{
+	margin-top: 25px;
+	float: right;
+}
+.formcontainer{
+	margin-top: 50px;
+}
+span a{
+	color: #777;
+	text-decoration: none;
+	padding-left: 10px;
+}
+.navbar-right{
+	margin:0px;
+}
+.navbar-right li{
+	padding-top: 15px;
+    padding-right: 60px;
+}

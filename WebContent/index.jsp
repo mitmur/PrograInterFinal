@@ -5,7 +5,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
-<title>INICIO</title>
+<title>garyCabro gay rosquete :D</title>
  <script type="text/javascript" src="js/facebook.js">  </script>
 </head>
 <body onload="ingresar()">

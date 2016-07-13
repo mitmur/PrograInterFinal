@@ -136,6 +136,7 @@ public class Gestion {
 		    }
 		} finally {
 		    cursor.close();
+		    
 		}
 		
 		

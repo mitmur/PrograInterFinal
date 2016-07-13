@@ -121,23 +121,19 @@ public class PaisDAO {
 		}
 	}*/
 	
-	public void editarProfesor(Pais p){
+	public void editarPais(Pais p){
 		
-		String sql= "UPDATE paises set nombres=?, "
-				+ "apellido_paterno=?, apellido_materno=?, foto_url=? , dni=?  ,id_estudio=?"
+		String sql= "UPDATE paises set nombre=?, "
+				+ "pbi=?"
 				+ " where id=?";
 		Connection conn = conectarse();		
 		
 		try {
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			
-			stmt.setString(1, p.getNombres());
-			stmt.setString(2, p.getApellido_paterno());
-			stmt.setString(3, p.getApellido_materno());			
-			stmt.setString(4, p.getFoto_url());
-			stmt.setString(5, p.getDni());
-			stmt.setInt(6, p.getId_estudio());
-			stmt.setInt(7,p.getId());
+			stmt.setString(1, p.getNombre());
+			stmt.setInt(2, p.getPbi());
+			stmt.setInt(3,p.getId());
 			
 
 			stmt.executeUpdate();
@@ -153,25 +149,21 @@ public class PaisDAO {
 	}
 	
 	
-	public Profesor obtenerDatosProfe(int id){
+	public Pais obtenerDatosPais(int id){
 		Connection conn = conectarse();
-		Profesor prof= new Profesor();
+		Pais pais= new Pais();
 		try {
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from profesores where id=" + id );			
+			ResultSet rs = stmt.executeQuery("select * from paises where id=" + id );			
 			while(rs.next()){
-				prof = new Profesor(
+				pais = new Pais(
 						rs.getInt("id"),
-						rs.getString("nombres"),
-						rs.getString("apellido_paterno"),
-						rs.getString("apellido_materno"),
-						rs.getString("dni"),
-						rs.getString("foto_url"),
-						rs.getInt("id_estudio"),
-						nombreEst(rs.getInt("id_estudio")));
+						rs.getString("nombre"),
+						rs.getInt("pbi"));
+			
 			}
 			desconectarse(conn);
-			return prof;
+			return pais;
 		} catch (SQLException e) {
 			e.printStackTrace();
 			desconectarse(conn);
@@ -180,9 +172,9 @@ public class PaisDAO {
 		
 	}
 	
-	public void eliminarProfesor(int id){
+	public void eliminarPais(int id){
 		Connection conn=conectarse();
-		String sql="delete from profesores where id = " + id;
+		String sql="delete from paises where id = " + id;
 		try {
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.executeUpdate();

@@ -1,52 +1,60 @@
 package edu.ulima.beans;
 
+public class Pais {
 
-public class Departamento {
-	
 	private int id;
 	private String nombre;
-	private int id_pais;
+	private int pbi;
 	
-	public Departamento(int id, String nombre, int id_pais) {
+	
+	public Pais(int id, String nombre, int pbi) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.id_pais = id_pais;
-	}
-	
-	
-	public Departamento() {
-		super();
+		this.pbi = pbi;
 	}
 
+
+	public Pais() {
+		super();
+	}
 
 
 	public int getId() {
 		return id;
 	}
+
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
+
 	public String getNombre() {
 		return nombre;
 	}
+
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getId_pais() {
-		return id_pais;
-	}
-	public void setId_pais(int id_pais) {
-		this.id_pais = id_pais;
+
+
+	public int getPbi() {
+		return pbi;
 	}
 
+
+	public void setPbi(int pbi) {
+		this.pbi = pbi;
+	}
 
 
 	@Override
 	public String toString() {
-		return "Departamento [id=" + id + ", nombre=" + nombre + ", id_pais=" + id_pais + "]";
+		return "Pais [id=" + id + ", nombre=" + nombre + ", pbi=" + pbi + "]";
 	}
 	
 	
-
+	
 }

@@ -1,0 +1,34 @@
+package edu.ulima.beans;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+public class DepartamentoDAO {
+	private EntityManager em;
+	public DepartamentoDAO(EntityManager em) {
+		super();
+		this.em = em;
+	}
+
+	public void registrar(Departamento dpto){
+		
+		em.getTransaction().begin();
+		em.persist(dpto);
+		em.getTransaction().commit();
+	}
+	
+	public List<Departamento> lista(){
+		Query query=em.createQuery("SELECT d FROM Departamento d");				
+		List<Departamento> lista=(List<Departamento>)query.getResultList();
+		return lista;
+	}
+	
+	public List<Departamento> listaFiltro(Pais pais){
+		Query query=em.createQuery("SELECT d FROM Departamento d where d.pais=:pais");
+		query.setParameter("pais", pais);		
+		List<Departamento> lista=(List<Departamento>)query.getResultList();
+		return lista;
+	}
+}

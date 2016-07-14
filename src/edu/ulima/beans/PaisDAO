@@ -1,0 +1,28 @@
+package edu.ulima.beans;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+public class PaisDAO {
+	private EntityManager em;
+	public PaisDAO(EntityManager em) {
+		super();
+		this.em = em;
+	}
+
+	public void registrar(Pais pais){
+		
+		em.getTransaction().begin();
+		em.persist(pais);
+		em.getTransaction().commit();
+	}
+	
+	public List<Pais> lista(){
+		Query query=em.createQuery("SELECT p FROM Pais p");				
+		List<Pais> lista=(List<Pais>)query.getResultList();
+		return lista;
+	}	
+	
+}
